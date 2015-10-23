@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="https://insta-monopoly.googlecode.com/svn"
+   name=""
+   revision="54"
+   last-author="erraprodopensource@gmail.com"
+   url="https://insta-monopoly.googlecode.com/svn/trunk/insta-monopoly/src/com/insta/monopoly/primitives"
+   committed-rev="54"
+   kind="dir"
+   committed-date="2011-03-18T13:50:03.565000Z"/>
+<entry
+   name="Rectangle.java"
+   checksum="29570c1d9887e1c3eb7ebad71428f92c"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-18T09:42:21.175000Z"
+   committed-rev="54"
+   kind="file"
+   committed-date="2011-03-18T13:50:03.565000Z"/>
+<entry
+   name="Vecteur.java"
+   checksum="1bed74fd2f7211b1aae4acec703130f9"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-18T09:42:21.070000Z"
+   committed-rev="54"
+   kind="file"
+   committed-date="2011-03-18T13:50:03.565000Z"/>
+</wc-entries>

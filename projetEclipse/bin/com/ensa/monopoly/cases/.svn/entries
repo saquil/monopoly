@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="https://insta-monopoly.googlecode.com/svn"
+   revision="33"
+   last-author="erraprodopensource@gmail.com"
+   uuid="db8e16d7-0a49-0a17-5735-17144c02cbb0"
+   url="https://insta-monopoly.googlecode.com/svn/trunk/insta-monopoly/src/com/insta/monopoly/cases"
+   committed-rev="33"
+   kind="dir"
+   committed-date="2011-03-16T14:35:11.953989Z"/>
+<entry
+   name="Case.java"
+   revision="64"
+   checksum="22d170bfa84c2f75693ca9336d75c558"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-18T13:57:38.179000Z"
+   committed-rev="64"
+   kind="file"
+   committed-date="2011-03-21T14:55:13.837000Z"/>
+<entry
+   name="CaseAllerPrison.java"
+   revision="56"
+   checksum="52854ec857856c54377a355ee39a1624"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="56"
+   text-time="2011-03-18T11:05:15.317000Z"
+   kind="file"
+   committed-date="2011-03-18T13:55:17.670000Z"/>
+<entry
+   name="CaseCarte.java"
+   revision="61"
+   checksum="949859b5d17135b48767695f8a35c283"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="61"
+   text-time="2011-03-21T09:24:58.823000Z"
+   kind="file"
+   committed-date="2011-03-21T09:40:58.999000Z"/>
+<entry
+   name="CaseChance.java"
+   revision="56"
+   checksum="bc58528ef8a6e56bb28113561918637c"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-18T11:10:35.704000Z"
+   committed-rev="56"
+   kind="file"
+   committed-date="2011-03-18T13:55:17.670000Z"/>
+<entry
+   name="CaseCommerciale.java"
+   revision="77"
+   checksum="fe5eacca2d7bb901867c8eedc6863315"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="77"
+   text-time="2011-03-22T14:04:43.059000Z"
+   kind="file"
+   committed-date="2011-03-22T15:21:06.222000Z"/>
+<entry
+   name="CaseCommunaute.java"
+   revision="56"
+   checksum="01e2a2b94c5727412ec4a0cdbaaa8b69"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-18T11:06:24.958000Z"
+   committed-rev="56"
+   kind="file"
+   committed-date="2011-03-18T13:55:17.670000Z"/>
+<entry
+   name="CaseCompagnie.java"
+   revision="63"
+   checksum="69f50d7c61fde49738e628791767ad1a"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="63"
+   text-time="2011-03-18T16:21:22.554000Z"
+   kind="file"
+   committed-date="2011-03-21T11:03:36.786000Z"/>
+<entry
+   name="CaseDepart.java"
+   revision="48"
+   checksum="ad8548ff5ddd0d0a2982d470e77d9ebb"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="48"
+   text-time="2011-03-18T11:06:13.779000Z"
+   kind="file"
+   committed-date="2011-03-18T12:39:46.561000Z"/>
+<entry
+   name="CaseGare.java"
+   revision="63"
+   checksum="526c306b407f0bd68067de703e26e988"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-18T16:35:51.442000Z"
+   committed-rev="63"
+   kind="file"
+   committed-date="2011-03-21T11:03:36.786000Z"/>
+<entry
+   name="CaseOppose.java"
+   schedule="delete"
+   checksum="a724bba78ec3750a99a02942fe052c6c"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="18"
+   text-time="2011-03-14T12:59:32.701000Z"
+   kind="file"
+   committed-date="2011-03-14T12:59:32.701586Z"/>
+<entry
+   name="CaseParcGratuit.java"
+   revision="48"
+   checksum="531f487cd251ea50735c7b7d9c7a66db"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-18T11:06:40.696000Z"
+   committed-rev="48"
+   kind="file"
+   committed-date="2011-03-18T12:39:46.561000Z"/>
+<entry
+   name="CasePrison.java"
+   revision="48"
+   checksum="cc837e752e0efa4a7685f1bc3bd1a20e"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="48"
+   text-time="2011-03-18T11:06:44.450000Z"
+   kind="file"
+   committed-date="2011-03-18T12:39:46.561000Z"/>
+<entry
+   name="CaseRue.java"
+   revision="77"
+   checksum="a4cdd0e7669b6133b0c444ac717d08e2"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="77"
+   text-time="2011-03-22T14:05:28.949000Z"
+   kind="file"
+   committed-date="2011-03-22T15:21:06.222000Z"/>
+<entry
+   name="CaseTaxe.java"
+   revision="63"
+   checksum="73b4b313ea913231abae6fcdd04ac1b6"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="63"
+   text-time="2011-03-21T09:52:03.462000Z"
+   kind="file"
+   committed-date="2011-03-21T11:03:36.786000Z"/>
+</wc-entries>

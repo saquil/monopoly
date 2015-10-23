@@ -1,0 +1,45 @@
+package com.insta.monopoly.cases;
+
+public abstract class CaseCommerciale extends Case {
+	private int prix;
+	private int proprietaire;
+	private boolean sousHypotheque;
+
+
+	public boolean isSousHypotheque() {
+		return sousHypotheque;
+	}
+
+	public void setSousHypotheque(boolean sousHypotheque) {
+		this.sousHypotheque = sousHypotheque;
+	}
+
+	public int getProprietaire() {
+		return proprietaire;
+	}
+
+	public void setProprietaire(int proprietaire) {
+		this.proprietaire = proprietaire;
+	}
+
+	public CaseCommerciale(int position, String nom) {
+		super(position, nom);
+		this.sousHypotheque = false;
+		this.proprietaire = -1;
+	}
+
+	public int getPrix() {
+		return this.prix;
+	}
+
+	public void setPrix(int prix) {
+		this.prix = prix;
+	}
+
+	public int valeurHypotheque() {
+		return (int)((float)this.getPrix()*0.8f);
+	}
+	
+	public abstract int prixLoyer(int facteur,
+			boolean terrainGroupeSousHypotheque);
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="https://insta-monopoly.googlecode.com/svn"
+   name=""
+   revision="33"
+   last-author="erraprodopensource@gmail.com"
+   url="https://insta-monopoly.googlecode.com/svn/trunk/insta-monopoly/src/com/insta/monopoly/main"
+   uuid="db8e16d7-0a49-0a17-5735-17144c02cbb0"
+   committed-rev="29"
+   kind="dir"
+   committed-date="2011-03-16T08:28:04.655982Z"/>
+<entry
+   name="Main.java"
+   revision="79"
+   checksum="76cbe92c8cebb89f62b8684dd7221f02"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-22T22:02:41.327000Z"
+   committed-rev="79"
+   kind="file"
+   committed-date="2011-03-22T22:23:17.387000Z"/>
+<entry
+   name="MainConsole.java"
+   revision="77"
+   schedule="delete"
+   checksum="11768ad93d5df28b24be674137137216"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="77"
+   text-time="2011-03-22T14:12:08.830000Z"
+   kind="file"
+   committed-date="2011-03-22T15:21:06.222000Z"/>
+</wc-entries>

@@ -1,0 +1,429 @@
+package com.insta.monopoly.main;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.insta.monopoly.cartes.CarteChance;
+import com.insta.monopoly.cartes.CarteCommunaute;
+import com.insta.monopoly.cases.Case;
+import com.insta.monopoly.cases.CaseAllerPrison;
+import com.insta.monopoly.cases.CaseCarte;
+import com.insta.monopoly.cases.CaseChance;
+import com.insta.monopoly.cases.CaseCommerciale;
+import com.insta.monopoly.cases.CaseCommunaute;
+import com.insta.monopoly.cases.CaseCompagnie;
+import com.insta.monopoly.cases.CaseGare;
+import com.insta.monopoly.cases.CaseParcGratuit;
+import com.insta.monopoly.cases.CaseRue;
+import com.insta.monopoly.cases.CaseTaxe;
+import com.insta.monopoly.entites.Joueur;
+import com.insta.monopoly.ihm.Fenetre;
+import com.insta.monopoly.jeu.De;
+import com.insta.monopoly.jeu.Jeu;
+import com.insta.monopoly.jeu.PlateauDeJeu;
+
+public class MainConsole {
+	public static Scanner sc;
+
+	public static boolean question(Scanner sc) {
+		String response;
+		char result;
+		response = sc.next();
+		result = response.charAt(0);
+		if (result == 'n' || result == 'N') {
+			return false;
+		}
+		return true;
+	}
+
+	public static int lancerDes() {
+		System.out
+				.println("Entrez une caractere et appuyez sur entree pour lancer les des");
+		sc.next();
+		int nb1 = De.getRandom(1, 6);
+		int nb2 = De.getRandom(1, 6);
+		System.out.println("Vous avez fait " + nb1 + " et " + nb2);
+		return (nb1 == nb2) ? -(nb1 + nb2) : (nb1 + nb2);
+	}
+
+	public static int getNombre() {
+		String reponse = sc.next();
+		try {
+			Integer.parseInt(reponse);
+			return Integer.parseInt(reponse);
+		} catch (NumberFormatException nfe) {
+			return 0;
+		}
+	}
+
+	public static void message(String contenu) {
+		if (contenu.length() > 0) {
+			System.out.println(contenu);
+		}
+	}
+
+	public void mettreAuxEncheres(CaseCommerciale propriete) {
+
+	}
+
+	public static void main(String[] argv) throws InterruptedException {
+		System.out.println("Bienvenue dans le monopoly INSTA !");
+		System.out.println("(c) 2011 - MIT License");
+
+		int nbJoueurs;
+		sc = new Scanner(System.in);
+		System.out.println("Entrez le nombre de joueurs");
+		while ((nbJoueurs = getNombre()) < 2 || nbJoueurs > 4) {
+			System.out.println("2 joueurs minimum et 4 joueurs maximum");
+		}
+
+		Jeu monopolyInstance = new Jeu(nbJoueurs);
+
+		message("\n" + monopolyInstance.getNbJoueurs()
+				+ " joueurs : la partie peut demarrer");
+		System.out.println("");
+
+		Fenetre fenetre = new Fenetre(monopolyInstance);
+
+		while (true) {
+			System.out
+					.println("--------------------------------------------------------------------");
+			Jeu monopoly = fenetre.getJeu();
+			Joueur joueur = monopoly.getJoueurCourant();
+			boolean actionTerminee = false;
+			PlateauDeJeu plateau = monopoly.getPlateau();
+
+			/**
+			 * SORTIR DE PRISON
+			 */
+
+			if (joueur.estEnPrison()) {
+				message("Joueur " + joueur.getId()
+						+ ", voulez vous payer 5000FF pour sortir de prison ?");
+				boolean reponse = question(sc);
+				if (reponse == true) {
+					joueur.decrAgent(5000);
+					joueur.setEstEnPrison(false);
+					message("Vous sortez de prison en payant 5000F");
+				} else {
+					message("Joueur "
+							+ joueur.getId()
+							+ " vous êtes en prison et avez refusé de payer 5000FF. Vous pouvez cependant sortir en faisant un double");
+				}
+			} else {
+				message("Joueur "
+						+ joueur.getId()
+						+ " c'est à votre tour ! Vous êtes actuellement détenteur de "
+						+ joueur.getArgent() + " €");
+			}
+
+			// int resultatLancer = Main.lancerDes();
+			System.out.println("lancé magique !");
+			int resultatLancer = getNombre();
+			/**
+			 * LA REGLE DE LA CASE DEPART EST IMPLEMENTEE DANS
+			 * Joueur.incrementePosition()
+			 */
+			/**
+			 * REGLE DES DOUBLES
+			 */
+			boolean aRealiseUnDouble = false;
+			if (resultatLancer < 0) {
+				resultatLancer = Math.abs(resultatLancer);
+				message("Vous avez fait un double ! Vous avez le droit de rejouer");
+				// SORTIR DE PRISON GRACE A UN DOUBLE
+				if (joueur.estEnPrison()) {
+					joueur.setEstEnPrison(false);
+					message("Vous êtes sortis de prison grâce à votre double ! Relancez les dés");
+					// Le tour du joueur reprend normalement
+					resultatLancer = Math.abs(MainConsole.lancerDes());
+					if (resultatLancer < 0) {
+						joueur.incrNbDoubles();
+					}
+				}
+				joueur.incrNbDoubles();
+				if (joueur.getNbDoubles() == 3) {
+					monopoly.emprisonerJoueur(joueur);
+				}
+				aRealiseUnDouble = true;
+			}
+
+			/**
+			 * LE JOUEUR EST EN PRISON, IL N'A PAS FAIT DE DOUBLE, IL N'A PAS
+			 * PAYE 5000FF
+			 */
+			if (joueur.estEnPrison()) {
+				joueur.incrNbToursEnPrison();
+				if (joueur.getNbToursEnPrison() > 3) {
+					message("Vous ne pouvez rester plus de trois tours en prison ! Vous allez être liberé si vos fonds vous le permettent");
+					joueur.decrAgent(5000);
+					joueur.setEstEnPrison(false);
+				} else {
+					// Le joueur n'a pas fait de double, il n'a pas payé, il est
+					// présent depuis moins de trois tours, il y rest
+					resultatLancer = 0;
+					message("Vous restez en prison !");
+				}
+			}
+			/**
+			 * DEPLACEMENT DU JOUEUR ET RECUPERATION DE LA CASE DE DESTINATION
+			 */
+			int destination = fenetre.getUI().calculNouvellePosition(
+					joueur.getPosition(), resultatLancer);
+			fenetre.getUI().deplacerJoueur(joueur.getId(), destination);
+			Case caseCourante = monopoly.getCaseJoueur(joueur);
+			Thread.currentThread().sleep(1500L);// sleep for 1500 ms
+			/**
+			 * ARRET SUR UNE PROPRIETE A VENDRE
+			 */
+			if (caseCourante instanceof CaseCommerciale
+					&& ((CaseCommerciale) caseCourante).getProprietaire() < 0
+					&& !actionTerminee) {
+
+				fenetre.getUI().getCaseCentrale().set(caseCourante);
+				fenetre.getUI().repaint();
+				// La case courante a t-elle un proprietaire ?
+				// Ce n'est pas le cas, proposer l'achat
+				boolean encherePossible = false;
+				if (joueur.getArgent() >= ((CaseCommerciale) caseCourante)
+						.getPrix()) {
+					System.out
+							.println("Vous etes sur '"
+									+ caseCourante.getNom()
+									+ "', libre d'achat. Souhaitez vous l'acquerir pour le montant de "
+									+ ((CaseCommerciale) caseCourante)
+											.getPrix() + " ? ");
+					if (question(sc) == true) {
+						// Effecter la transaction
+						joueur.decrAgent(((CaseCommerciale) caseCourante)
+								.getPrix());
+						((CaseCommerciale) caseCourante).setProprietaire(joueur
+								.getId());
+						message("Vous êtes desormais l'heureux proprietaire de "
+								+ caseCourante.getNom());
+					} else {
+						// Le joueur refuse d'acheter, l'enchere est possible
+						encherePossible = true;
+					}
+				} else {
+					message("Vous êtes sur '"
+							+ caseCourante.getNom()
+							+ "', libre d'achat, mais vous ne disposez pas de fonds suffisant pour devenir proprietaire");
+					// Le joueur n'a pas assez d'argent, l'enchere est possible
+					encherePossible = true;
+				}
+				// Demarrage de la vente aux encheres
+				if (encherePossible == true) {
+					boolean enchereTerminee = false;
+					ArrayList<Integer> participants = new ArrayList<Integer>();
+					for (int i = 0; i < monopoly.getNbJoueurs(); i++) {
+						participants.add(monopoly.getJoueur(i).getId());
+					}
+					message(caseCourante.getNom()
+							+ " est en vente aux enchères ! (valeur "
+							+ ((CaseCommerciale) caseCourante).getPrix()
+							+ "€) : " + participants.size() + " participants");
+					int miseAPrix = -1;
+					while (!enchereTerminee) {
+						int id = 0;
+						while (participants.size() > 1) {
+							message("Joueur "
+									+ participants.get(id)
+									+ " proposez votre prix de vente pour l'acquisition de '"
+									+ caseCourante.getNom()
+									+ "' (0 pour ne pas participer)");
+							if (miseAPrix > 0) {
+								message("La mise a prix actuelle est de "
+										+ miseAPrix + "€");
+							}
+							int propositionPrix = getNombre();
+							if (propositionPrix == 0
+									|| propositionPrix <= miseAPrix) {
+								message("Le joueur " + participants.get(id)
+										+ " s'est retiré de la vente");
+								participants.remove(id);
+							} else if (monopoly.getJoueur(participants.get(id))
+									.getArgent() < propositionPrix) {
+								message("Vous n'avez plus suffisement d'argent pour participer à cette vente");
+								participants.remove(id);
+							} else if (propositionPrix > miseAPrix) {
+								miseAPrix = propositionPrix;
+							}
+							id++;
+							id = (id >= participants.size()) ? 0 : id;
+						}
+						// La vente aux encheres est terminée
+						enchereTerminee = true;
+						if (participants.size() == 1 && miseAPrix > 0) {
+							// On a un nouveau proprietaire !
+							// Effecter la transaction
+							monopoly.getJoueur(participants.get(0)).decrAgent(
+									miseAPrix);
+							((CaseCommerciale) caseCourante)
+									.setProprietaire(participants.get(0));
+							message("Le joueur "
+									+ participants.get(0)
+									+ " est desormais l'heureux proprietaire de "
+									+ caseCourante.getNom());
+
+						}
+					}
+				}
+				actionTerminee = true;
+			}
+
+			/**
+			 * ARRET SUR UNE PROPRIETE POSSEDEE PAR UN JOUEUR TODO : impot sur
+			 * le revenu n'est pas une case commerciale !
+			 */
+			if (caseCourante instanceof CaseCommerciale
+					&& ((CaseCommerciale) caseCourante).getProprietaire() >= 0
+					&& !actionTerminee) {
+				// Verifier que le joueur n'est pas proprietaire
+				int proprietaire = ((CaseCommerciale) caseCourante)
+						.getProprietaire();
+				Joueur joueurProprietaire = monopoly.getJoueur(proprietaire);
+				if (proprietaire == joueur.getId()) {
+					message("Vous êtes sur " + caseCourante.getNom()
+							+ ", une de vos proprietés");
+				} else {
+					// Le joueur doit payer un loyer
+					int loyer = 0;
+					if (caseCourante instanceof CaseCompagnie) {
+						int nbCompagnies = plateau
+								.nombreCompagniesPossedees(proprietaire);
+						loyer = ((CaseCompagnie) caseCourante).prixLoyer(
+								nbCompagnies,
+								plateau.compagnieSousHypotheque(),
+								resultatLancer);
+					} else if (caseCourante instanceof CaseGare) {
+						int nbGares = plateau.nombreGarePossedees(proprietaire);
+						loyer = ((CaseGare) caseCourante).prixLoyer(nbGares,
+								plateau.gareSousHypotheque());
+					} else if (caseCourante instanceof CaseRue) {
+						// C'est une terrain
+						int nbMaisons = ((CaseRue) caseCourante).getNbMaison();
+						loyer = ((CaseRue) caseCourante)
+								.prixLoyer(
+										nbMaisons,
+										plateau.quartierSousHypotheque((CaseRue) caseCourante));
+					}
+					message("Vous allez payer un loyer de " + loyer
+							+ " au joueur " + proprietaire);
+					joueur.decrAgent(loyer);
+					/*
+					 * TODO: IF ARGENT < 0, PREVOIR BANQUEROUTE SI AUCUNE
+					 * POSSESSION
+					 */
+					joueurProprietaire.incrArgent(loyer);
+				}
+				actionTerminee = true;
+			}
+
+			/**
+			 * CARTES CHANCE
+			 */
+			if (caseCourante instanceof CaseCarte) {
+				int startPosition = joueur.getPosition();
+				int finalPosition = 0;
+				if (caseCourante instanceof CaseChance) {
+					CarteChance carte = plateau.getPioche()
+							.piocherUneCarteChance();
+					fenetre.getUI().getCaseCentrale().set(carte);
+					message("Vous avez tiré une carte chance ! '"
+							+ carte.getNom() + "'");
+					String message_retour = carte.affecterJoueur(joueur);
+					message(message_retour);
+					finalPosition = carte.getEffetPosition();
+				} else if (caseCourante instanceof CaseCommunaute) {
+					CarteCommunaute carte = plateau.getPioche()
+							.piocherUneCarteCommunaute();
+					fenetre.getUI().getCaseCentrale().set(carte);
+					message("Vous avez tiré une carte caisse de communauté ! '"
+							+ carte.getNom() + "'");
+					String message_retour = carte.affecterJoueur(joueur);
+					message(message_retour);
+					finalPosition = carte.getEffetPosition();
+				}
+
+				if (finalPosition >= 0) {
+					joueur.setPosition(startPosition);
+					joueur.getPositionPlateau().animate = false;
+					fenetre.getUI().deplacerJoueur(joueur.getId(),
+							finalPosition);
+					Thread.currentThread().sleep(1500L);// sleep for 1000 ms
+				}
+
+				fenetre.getUI().repaint();
+				// question(sc);
+			}
+
+			/**
+			 * TAXE ET IMPOTS
+			 */
+			if (caseCourante instanceof CaseTaxe) {
+				message("'" + caseCourante.getNom()
+						+ "' - Vous devez regler un montant de "
+						+ ((CaseTaxe) caseCourante).getTaxe() + "FF");
+				joueur.decrAgent(((CaseTaxe) caseCourante).getTaxe());
+				plateau.getPotCommun().incrArgent(
+						((CaseTaxe) caseCourante).getTaxe());
+			}
+
+			/**
+			 * PARC GRATUIT
+			 */
+			if (caseCourante instanceof CaseParcGratuit) {
+				message("Jour de chance ! Vous remportez le parc gratuit d'un motant de "
+						+ plateau.getPotCommun().getArgent() + "FF");
+				joueur.incrArgent(plateau.getPotCommun().getArgent());
+				plateau.getPotCommun().setArgent(0);
+			}
+
+			/**
+			 * ALLER EN PRISON
+			 */
+			if (caseCourante instanceof CaseAllerPrison) {
+				message("Vous allez directement en prison ! Ne passez pas par la case départ, ne touchez pas 20000FF");
+				joueur.setPosition(((CaseAllerPrison) caseCourante)
+						.getPosition());
+				joueur.setEstEnPrison(true);
+			}
+
+			/*
+			 * ACHAT DE MAISON
+			 */
+			ArrayList<CaseCommerciale> casesConstructibles = plateau
+					.casesConstructibles(joueur);
+			if (casesConstructibles.size() > 0) {
+				for (int i = 0; i < casesConstructibles.size(); i++) {
+					CaseRue caseConstr = (CaseRue)casesConstructibles.get(i);
+					String nomConstruction = (caseConstr.getNbMaison() == 4) ? "un hôtel"
+							: "une maison";
+					System.out.println("Voulez vous construire "
+							+ nomConstruction + " sur " + caseConstr.getNom()
+							+ " pour la somme de " + caseConstr.prixMaison());
+					boolean resultat = question(sc);
+					if (resultat == true) {
+						if (joueur.getArgent() > caseConstr.prixMaison()) {
+							joueur.decrAgent(caseConstr.prixMaison());
+							caseConstr
+									.setNbMaison(caseConstr.getNbMaison() + 1);
+						} else {
+							System.out
+									.println("Malheureusement, vous n'avez pas assez d'argent pour construire "
+											+ nomConstruction
+											+ " sur "
+											+ caseConstr.getNom());
+						}
+					}
+				}
+			}
+
+			fenetre.getUI().repaint();
+			if (!aRealiseUnDouble) {
+				monopoly.prochainJoueur();
+			}
+		}
+	}
+}

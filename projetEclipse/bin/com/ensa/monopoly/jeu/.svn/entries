@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="https://insta-monopoly.googlecode.com/svn"
+   name=""
+   revision="33"
+   last-author="erraprodopensource@gmail.com"
+   uuid="db8e16d7-0a49-0a17-5735-17144c02cbb0"
+   url="https://insta-monopoly.googlecode.com/svn/trunk/insta-monopoly/src/com/insta/monopoly/jeu"
+   committed-rev="25"
+   kind="dir"
+   committed-date="2011-03-15T15:48:27.062798Z"/>
+<entry
+   name="De.java"
+   conflict-new="De.java.r20"
+   conflict-wrk="De.java.mine"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-14T08:56:44.927000Z"
+   committed-rev="20"
+   kind="file"
+   committed-date="2011-03-14T13:06:43.497760Z"
+   checksum="582ce59033b1d6a9f1ab526643dc4ee2"
+   conflict-old="De.java.r17"/>
+<entry
+   name="Jeu.java"
+   revision="79"
+   checksum="2774ececdb8de421a2c0985eeaa72b64"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-22T22:03:13.416000Z"
+   committed-rev="79"
+   kind="file"
+   committed-date="2011-03-22T22:23:17.387000Z"/>
+<entry
+   name="PlateauDeJeu.java"
+   revision="79"
+   checksum="9b179fe0f34956653643043a587922dc"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="79"
+   text-time="2011-03-22T18:57:32.083000Z"
+   kind="file"
+   committed-date="2011-03-22T22:23:17.387000Z"/>
+<entry
+   name="Tools.java"
+   checksum="330f436e32342e71fd215e6347af8c11"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-14T12:59:32.701000Z"
+   committed-rev="18"
+   kind="file"
+   committed-date="2011-03-14T12:59:32.701586Z"/>
+</wc-entries>

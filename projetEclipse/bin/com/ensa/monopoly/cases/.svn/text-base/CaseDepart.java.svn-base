@@ -1,0 +1,8 @@
+package com.insta.monopoly.cases;
+
+public class CaseDepart extends Case {
+
+	public CaseDepart(int position, String nom) {
+		super(position, nom);
+	}
+}

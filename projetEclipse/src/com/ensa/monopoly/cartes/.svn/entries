@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="https://insta-monopoly.googlecode.com/svn"
+   revision="33"
+   last-author="erraprodopensource@gmail.com"
+   url="https://insta-monopoly.googlecode.com/svn/trunk/insta-monopoly/src/com/insta/monopoly/cartes"
+   uuid="db8e16d7-0a49-0a17-5735-17144c02cbb0"
+   committed-rev="31"
+   kind="dir"
+   committed-date="2011-03-16T14:07:38.746002Z"/>
+<entry
+   name="Carte.java"
+   revision="80"
+   checksum="e49ab679a26ef5dbf0a4cfa42a55a364"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="80"
+   text-time="2011-03-22T22:16:59.593000Z"
+   kind="file"
+   committed-date="2011-03-22T22:23:28.293000Z"/>
+<entry
+   name="CarteChance.java"
+   revision="80"
+   checksum="92ec8d9b0b4ef08c72c59a037be03784"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-22T22:17:22.808000Z"
+   committed-rev="80"
+   kind="file"
+   committed-date="2011-03-22T22:23:28.293000Z"/>
+<entry
+   name="CarteCommunaute.java"
+   revision="80"
+   checksum="573127567029b1bb3b1550fecd336fd4"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-22T22:17:34.911000Z"
+   committed-rev="79"
+   kind="file"
+   committed-date="2011-03-22T22:23:17.387000Z"/>
+<entry
+   name="Pioche.java"
+   revision="70"
+   checksum="02786d97f98e8621b49960585dbac821"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-21T22:30:33.462000Z"
+   committed-rev="70"
+   kind="file"
+   committed-date="2011-03-22T13:43:56.505000Z"/>
+</wc-entries>

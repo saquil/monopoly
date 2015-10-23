@@ -1,0 +1,9 @@
+package com.insta.monopoly.cases;
+
+public class CaseOppose extends Case {
+
+	public CaseOppose(int position) {
+		super(position);
+		this.setNom("Parc gratuit");
+	}
+}

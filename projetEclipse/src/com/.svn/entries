@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="https://insta-monopoly.googlecode.com/svn"
+   revision="33"
+   last-author="erraprodopensource@gmail.com"
+   uuid="db8e16d7-0a49-0a17-5735-17144c02cbb0"
+   url="https://insta-monopoly.googlecode.com/svn/trunk/insta-monopoly/src/com"
+   committed-rev="33"
+   kind="dir"
+   committed-date="2011-03-16T14:35:11.953989Z"/>
+<entry
+   name="insta"
+   kind="dir"/>
+</wc-entries>

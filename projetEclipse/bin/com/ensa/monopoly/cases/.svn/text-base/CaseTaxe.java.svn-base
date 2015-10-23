@@ -1,0 +1,18 @@
+package com.insta.monopoly.cases;
+
+public class CaseTaxe extends Case {
+	int prix;
+	
+	public CaseTaxe(int position, String nom, int prix) {
+		super(position, nom);
+		this.setTaxe(prix);
+	}
+
+	public int getTaxe() {
+		return this.prix;
+	}
+
+	public void setTaxe(int taxe) {
+		this.prix = taxe;
+	}
+}

@@ -1,0 +1,9 @@
+package com.insta.monopoly.jeu;
+
+public class De {
+	public static int getRandom(int lower, int higher) {
+		
+		int random = (int) (Math.random() * (higher - lower)) + lower;
+		return random;
+	}
+}

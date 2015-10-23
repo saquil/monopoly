@@ -1,0 +1,13 @@
+package com.insta.monopoly.cases;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.insta.monopoly.cartes.CarteChance;
+import com.insta.monopoly.cartes.CarteCommunaute;
+
+public class CaseCarte extends Case {
+	public CaseCarte(int position, String nom) {
+		super(position, nom);
+	}
+}

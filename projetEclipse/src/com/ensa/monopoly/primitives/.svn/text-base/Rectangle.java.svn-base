@@ -1,0 +1,31 @@
+package com.insta.monopoly.primitives;
+
+public class Rectangle {
+	public float x;
+	public float y;
+	public float w;
+	public float h;
+	
+	public Rectangle() {
+		x = y = w = h = 0;
+	}
+	public Rectangle(float origineX, float origineY, float rectW, float rectH) {
+		x = origineX;
+		y = origineY;
+		w = rectW;
+		h = rectH;
+	}
+	
+	public int getX() {
+		return (int)x;
+	}
+	public int getY() {
+		return (int)y;
+	}
+	public int getW() {
+		return (int)w;
+	}
+	public int getH() {
+		return (int)h;
+	}
+}

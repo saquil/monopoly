@@ -1,0 +1,209 @@
+package com.insta.monopoly.ihm;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+
+import javax.swing.JPanel;
+
+import com.insta.monopoly.cartes.Carte;
+import com.insta.monopoly.cartes.CarteChance;
+import com.insta.monopoly.cases.Case;
+import com.insta.monopoly.cases.CaseCompagnie;
+import com.insta.monopoly.cases.CaseGare;
+import com.insta.monopoly.cases.CaseRue;
+import com.insta.monopoly.jeu.Jeu;
+
+public class DessinCentral {
+	Case caseCentrale;
+	Carte carteCentrale;
+	public boolean bCaseCentrale = false;
+
+	public void set(Case uneCase) {
+		this.caseCentrale = uneCase;
+		this.bCaseCentrale = true;
+		this.carteCentrale = null;
+	}
+
+	public void set(Carte uneCarte) {
+		this.carteCentrale = uneCarte;
+		this.bCaseCentrale = false;
+		this.caseCentrale = null;
+	}
+
+	public Object getElementCentral() {
+		if (this.caseCentrale == null) {
+			return this.carteCentrale;
+		}
+		return this.caseCentrale;
+	}
+
+	public void drawArgentJoueurs(Graphics g, Jeu jeu) {
+		for (int i = 0; i < jeu.getJoueurs().size(); i++) {
+
+			int x = Fenetre.globalWidth / 2 - 100;
+			int y = 130;
+			Fonts.setFontSize(g, 20, true);
+			Fonts.drawString(g, "Joueur " + jeu.getJoueurs().get(i).getId() + " : "+jeu.getJoueurs().get(i).getArgent()+"€",
+					x, y + i * 20, 200);
+
+		}
+	}
+	
+	public void drawLogoEtCartes(Graphics g, DessinPlateau plateau) {
+		g.drawImage(plateau.getImages().getMonopolyLogo(),Fenetre.globalWidth/2-61, 190, 131, 50, plateau);
+		
+
+		int x = Fenetre.globalWidth / 2 + 150;
+		int y = Fenetre.globalHeight / 2;
+		g.drawRect(x, y, 50, 70);
+		g.drawImage(plateau.getImages().getMonopolyChance(), x, y, 50, 70,  plateau);
+		g.drawRect(x, y+80, 50, 70);
+		g.drawImage(plateau.getImages().getMonopolyChest(), x, y+80, 50, 70,  plateau);
+		}
+
+	public void drawCarteCentrale(Graphics g, DessinPlateau plateau) {
+		if (this.getElementCentral() != null) {
+			if (this.bCaseCentrale == true) {
+				Case caseCentrale = (Case) this.getElementCentral();
+				if (caseCentrale instanceof CaseRue) {
+					CaseRue r = ((CaseRue) caseCentrale);
+					int x = Fenetre.globalWidth / 2 - 100;
+					int y = Fenetre.globalHeight / 2 - 100;
+					g.setColor(Color.BLACK);
+					g.drawRect(x, y, 200, 330);
+					g.setColor(r.getCouleur());
+					g.fillRect(x, y, 200, 70);
+					g.setColor(Color.black);
+					Fonts.setFontSize(g, 20, true);
+					Fonts.drawString(g, r.getNom(), x + 10, y + 90, 180);
+
+					Fonts.setFontSize(g, 16, true);
+					Fonts.drawString(g, "Prix : " + r.getPrix() + "FF", x + 10,
+							y + 130, 180);
+
+					g.drawLine(x, y + 140, x + 200, y + 140);
+
+					Fonts.setFontSize(g, 14, true);
+					Fonts.drawString(g, "Terrain nu : " + r.prixLoyer(0, false)
+							+ "FF", x + 10, y + 160, 180);
+					Fonts.setFontSize(g, 14, true);
+					Fonts.drawString(g, "1 maison : " + r.prixLoyer(1, false)
+							+ "FF", x + 10, y + 175, 180);
+					Fonts.setFontSize(g, 14, true);
+					Fonts.drawString(g, "2 maisons : " + r.prixLoyer(2, false)
+							+ "FF", x + 10, y + 190, 180);
+					Fonts.setFontSize(g, 14, true);
+					Fonts.drawString(g, "3 maisons : " + r.prixLoyer(3, false)
+							+ "FF", x + 10, y + 205, 180);
+					Fonts.setFontSize(g, 14, true);
+					Fonts.drawString(g, "4 maisons : " + r.prixLoyer(4, false)
+							+ "FF", x + 10, y + 220, 180);
+					Fonts.setFontSize(g, 14, true);
+					Fonts.drawString(g, "Un hôtel : " + r.prixLoyer(5, false)
+							+ "FF", x + 10, y + 235, 180);
+
+					g.drawLine(x, y + 245, x + 200, y + 245);
+
+					Fonts.setFontSize(g, 14, true);
+					Fonts.drawString(g, "Prix Maison : " + r.prixMaison()
+							+ "FF", x + 10, y + 265, 180);
+					Fonts.setFontSize(g, 14, true);
+					Fonts.drawString(g,
+							"Prix Hôtel : " + r.prixMaison() + "FF", x + 10,
+							y + 280, 180);
+					Fonts.setFontSize(g, 14, true);
+
+					g.drawLine(x, y + 285, x + 200, y + 285);
+
+					Fonts.drawString(g,
+							"Valeur hypothequaire : " + r.valeurHypotheque()
+									+ "FF", x + 10, y + 305, 180);
+				} else if (caseCentrale instanceof CaseGare) {
+					CaseGare gare = ((CaseGare) caseCentrale);
+					int x = Fenetre.globalWidth / 2 - 100;
+					int y = Fenetre.globalHeight / 2 - 100;
+					g.setColor(Color.BLACK);
+					g.drawRect(x, y, 200, 330);
+					g.setColor(Color.black);
+					Fonts.setFontSize(g, 20, true);
+					Fonts.drawString(g, gare.getNom(), x + 10, y + 45, 180);
+
+					g.drawLine(x, y + 70, x + 200, y + 70);
+
+					Fonts.setFontSize(g, 14, true);
+					Fonts.drawString(g, "1 Gare : " + gare.prixLoyer(0, false)
+							+ "FF", x + 10, y + 90, 180);
+					Fonts.setFontSize(g, 14, true);
+					Fonts.drawString(g, "2 Gares: " + gare.prixLoyer(1, false)
+							+ "FF", x + 10, y + 110, 180);
+					Fonts.setFontSize(g, 14, true);
+					Fonts.drawString(g, "3 Gares : " + gare.prixLoyer(2, false)
+							+ "FF", x + 10, y + 130, 180);
+					Fonts.setFontSize(g, 14, true);
+					Fonts.drawString(g, "4 Gares : " + gare.prixLoyer(3, false)
+							+ "FF", x + 10, y + 150, 180);
+					g.drawImage(plateau.getImages().getIconeGare(), x + 75,
+							y + 160, 50, 50, plateau);
+					g.drawLine(x, y + 220, x + 200, y + 220);
+					Fonts.setFontSize(g, 14, true);
+					Fonts.drawString(g,
+							"Valeur hypotecaire : " + gare.valeurHypotheque()
+									+ "FF", x + 10, y + 250, 180);
+				} else if (caseCentrale instanceof CaseCompagnie) {
+					CaseCompagnie compagnie = ((CaseCompagnie) caseCentrale);
+					int x = Fenetre.globalWidth / 2 - 100;
+					int y = Fenetre.globalHeight / 2 - 100;
+					g.setColor(Color.BLACK);
+					g.drawRect(x, y, 200, 330);
+					g.setColor(Color.black);
+					Fonts.setFontSize(g, 20, true);
+					Fonts.drawString(g, compagnie.getNom(), x + 10, y + 45, 180);
+
+					g.drawLine(x, y + 70, x + 200, y + 70);
+
+					Fonts.setFontSize(g, 14, true);
+					Fonts.drawString(g, "1 Compagnie : Valeur des dés * 15 ",
+							x + 10, y + 90, 180);
+					Fonts.setFontSize(g, 14, true);
+					Fonts.drawString(g,
+							"2 Compagnies : Valeur des dés * 37,5 ", x + 10,
+							y + 130, 180);
+
+					Image image = (compagnie.estLaCompagnieDesEaux()) ? plateau
+							.getImages().getIconeCompagnieDesEaux() : plateau
+							.getImages().getIconeCompagnieElectricite();
+					g.drawImage(image, x + 75, y + 160, 50, 50, plateau);
+					g.drawLine(x, y + 220, x + 200, y + 220);
+					Fonts.setFontSize(g, 14, true);
+					Fonts.drawString(
+							g,
+							"Valeur hypotecaire : "
+									+ compagnie.valeurHypotheque() + "FF",
+							x + 10, y + 250, 180);
+				}
+			} else {
+				Carte carteCentrale = (Carte) this.getElementCentral();
+				int x = Fenetre.globalWidth / 2 - 100;
+				int y = Fenetre.globalHeight / 2 - 100;
+				g.setColor(Color.BLACK);
+				g.drawRect(x, y, 200, 220);
+				g.setColor(Color.black);
+				Fonts.setFontSize(g, 20, true);
+				String intitule = (carteCentrale instanceof CarteChance) ? "Carte Chance"
+						: "Caisse de communauté";
+				Fonts.drawString(g, intitule, x + 10, y + 45, 180);
+
+				g.drawLine(x, y + 70, x + 200, y + 70);
+
+				Fonts.setFontSize(g, 14, true);
+				Fonts.drawString(g, carteCentrale.getNom(), x + 10, y + 90, 180);
+
+				Image image = (carteCentrale instanceof CarteChance) ? plateau
+						.getImages().getIconeChance() : plateau.getImages()
+						.getIconeCaisseCommunauté();
+				g.drawImage(image, x + 75, y + 160, 50, 50, plateau);
+			}
+		}
+	}
+}

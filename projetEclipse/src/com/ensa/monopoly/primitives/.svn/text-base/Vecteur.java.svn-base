@@ -1,0 +1,45 @@
+package com.insta.monopoly.primitives;
+
+import com.insta.monopoly.ihm.Fenetre;
+
+public class Vecteur {
+	public float x;
+	public float y;
+	public boolean animate = false;
+	
+	public int getX() {
+		return (int)x;
+	}
+	
+	public int getY() {
+		return (int)y;
+	}
+	
+	public Vecteur() {
+		x = y = 0;
+	}
+	
+	public Vecteur(float x, float y) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	public Vecteur toRelativeCoordinates() {
+		this.x = this.x/(float)Fenetre.globalWidth;
+		this.y = this.y/(float)Fenetre.globalHeight;
+		return this;
+	}
+	
+	public Vecteur toAbsoluteCoordinates() {
+		Vecteur v = new Vecteur(this.x*(float)Fenetre.globalWidth, this.y*(float)Fenetre.globalHeight);
+		return v;
+	}
+	
+	public static Vecteur soustraire(Vecteur vA, Vecteur vB) {
+		return new Vecteur(vA.x - vB.x, vA.y - vB.y);
+	}
+	
+	public static Vecteur additionner(Vecteur vA, Vecteur vB) {
+		return new Vecteur(vA.x+vB.x, vA.y+vB.y);
+	}
+}

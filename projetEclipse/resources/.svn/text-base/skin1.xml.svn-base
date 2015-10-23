@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<jeu>
+<bgcolor red="186" green="228" blue="188"></bgcolor>
+<cartes_chance>
+	<carte_chance>
+		<nom>Amende pour excès de vitesse</nom>
+		<effet_argent>-1000</effet_argent>
+		<effet_position>-1</effet_position>
+	</carte_chance>
+	<carte_chance>
+		<nom>Allez à la gare de Lyon</nom>
+		<effet_argent>0</effet_argent>
+		<effet_position>15</effet_position>
+	</carte_chance>
+	<carte_chance>
+		<nom>Allez en prison</nom>
+		<effet_argent>0</effet_argent>
+		<effet_position>10</effet_position>
+	</carte_chance>
+	<carte_chance>
+		<nom>La banque vous verse un dividende de 5000 F</nom>
+		<effet_argent>5000</effet_argent>
+		<effet_position>-1</effet_position>
+	</carte_chance>
+	<carte_chance>
+		<nom>Avancez jusqu'à la case départ</nom>
+		<effet_argent>20000</effet_argent>
+		<effet_position>0</effet_position>
+	</carte_chance>
+</cartes_chance>
+
+<cartes_communaute>
+	<carte_communaute>
+		<nom>Amende pour ivresse</nom>
+		<effet_argent>-2000</effet_argent>
+		<effet_position>-1</effet_position>
+	</carte_communaute>
+	<carte_communaute>
+		<nom>Avancez au Bd de la Vilette</nom>
+		<effet_argent>0</effet_argent>
+		<effet_position>11</effet_position>
+	</carte_communaute>
+	<carte_communaute>
+		<nom>Votre immeuble et votre prêt rapportent</nom>
+		<effet_argent>15000</effet_argent>
+		<effet_position>-1</effet_position>
+	</carte_communaute>
+	<carte_communaute>
+		<nom>Allez en prison</nom>
+		<effet_argent>0</effet_argent>
+		<effet_position>10</effet_position>
+	</carte_communaute>
+	<carte_communaute>
+		<nom>Vous avez gagné le prix de mots croisés</nom>
+		<effet_argent>10000</effet_argent>
+		<effet_position>-1</effet_position>
+	</carte_communaute>
+</cartes_communaute>
+<images>
+	<image id="icone_gare">
+		<src>resources/monopoly_icon_train_bw.gif</src>
+	</image>
+	<image id="icone_chance">
+		<src>resources/monopoly_icon_chance_1_col.gif</src>
+	</image>
+	<image id="icone_parc_gratuit">
+		<src>resources/monopoly_icon_parking_col.gif</src>
+	</image>
+	<image id="icone_prison">
+		<src>resources/monopoly_icon_jake.gif</src>
+	</image>
+	<image id="icone_aller_prison">
+		<src>resources/monopoly_icon_go_jail_col.gif</src>
+	</image>
+	<image id="icone_caisse_communaute">
+		<src>resources/monopoly_icon_chest_col.gif</src>
+	</image>
+	<image id="icone_taxe">
+		<src>resources/monopoly_icon_tax_col.gif</src>
+	</image>
+	<image id="icone_compagnie_electricite">
+		<src>resources/monopoly_icon_electric_col.gif</src>
+	</image>
+	<image id="icone_compagnie_eaux">
+		<src>resources/monopoly_icon_water_bw.gif</src>
+	</image>
+	<image id="icone_depart">
+		<src>resources/monopoly_icon_arrow_col.gif</src>
+	</image>
+	<image id="icone_maison">
+		<src>resources/monopoly_maison.png</src>
+	</image>
+	<image id="icone_hotel">
+		<src>resources/monopoly_hotel.png</src>
+	</image>
+
+	<image id="monopoly_logo">
+		<src>resources/monopoly_logo.png</src>
+	</image>
+	<image id="monopoly_chance">
+		<src>resources/monopoly_chance.gif</src>
+	</image>
+	<image id="monopoly_chest">
+		<src>resources/monopoly_chest.gif</src>
+	</image>
+
+	<image id="icone_joueur0">
+		<src>resources/monopoly_token_car.png</src>
+	</image>
+	<image id="icone_joueur1">
+		<src>resources/monopoly_token_dog.png</src>
+	</image>
+	<image id="icone_joueur2">
+		<src>resources/monopoly_token_hat.png</src>
+	</image>
+	<image id="icone_joueur3">
+		<src>resources/monopoly_token_thimble.png</src>
+	</image>
+</images>
+<cases>
+   <case class="CaseDepart">
+      <nom>Depart</nom>
+   </case>
+
+   <case class="CaseRue">
+      <nom>Boulevard de Belleville</nom>
+      <couleur>#913C17</couleur>
+      <prix>6000</prix>
+   </case>
+
+   <case class="CaseCommunaute">
+      <nom>Caisse de communauté</nom>
+   </case>
+
+   <case  class="CaseRue">
+      <nom>Rue Lecourbe</nom>
+      <couleur>#913C17</couleur>
+      <prix>6000</prix>
+   </case>
+
+   <case class="CaseTaxe">
+      <nom>Impôts sur le revenu</nom>
+      <prix>20000</prix>
+   </case>
+
+   <case class="CaseGare">
+      <nom>Montparnasse</nom>
+      <prix>20000</prix>
+	</case>
+
+	   <case class="CaseRue">
+      <nom>Rue de Vaugirard</nom>
+      <couleur>#01B2F7</couleur>
+      <prix>10000</prix>
+   </case>
+
+   <case class="CaseChance">
+   		<nom>Chance</nom>
+   </case>
+
+   <case class="CaseRue">
+      <nom>Rue de Courcelles</nom>
+      <couleur>#01B2F7</couleur>
+      <prix>10000</prix>
+   </case>
+
+   <case class="CaseRue">
+   		<nom>Avenue de la République</nom>
+   		<couleur>#01B2F7</couleur>
+		<prix>12000</prix>
+   </case>
+
+   <case class="CasePrison">
+   	<nom>Prison</nom>
+   </case>
+
+   <case class="CaseRue">
+   		<nom>Boulevard de la Vilette</nom>
+   		<couleur>#EC0090</couleur>
+   		<prix>14000</prix>
+   </case>
+
+   <case class="CaseCompagnie">
+   		<nom>Compagnie d'éléctricité</nom>
+   		<prix>15000</prix>
+   </case>
+
+   <case class="CaseRue">
+   		<nom>Avenue de Neuilly</nom>
+   		<couleur>#EC0090</couleur>
+   		<prix>14000</prix>
+   </case>
+
+   <case class="CaseRue">
+   		<nom>Rue de Paradis</nom>
+   		<couleur>#EC0090</couleur>
+   		<prix>16000</prix>
+   </case>
+
+   <case class="CaseGare">
+   		<nom>Gare de Lyon</nom>
+   		<prix>20000</prix>
+   </case>
+
+   <case class="CaseRue">
+   		<nom>Avenue de Mozart</nom>
+   		<couleur>#FC8D2E</couleur>
+   		<prix>18000</prix>
+   </case>
+
+   <case class="CaseCommunaute">
+   		<nom>Caisse de communauté</nom>
+   </case>
+
+   <case class="CaseRue">
+   		<nom>Boulevard Saint-Michel</nom>
+   		<couleur>#FC8D2E</couleur>
+   		<prix>18000</prix>
+   </case>
+
+   <case class="CaseRue">
+   		<nom>Place Pigalle</nom>
+   		<couleur>#FC8D2E</couleur>
+   		<prix>20000</prix>
+   </case>
+
+   <case class="CaseParcGratuit">
+   		<nom>Parc Gratuit</nom>
+   </case>
+
+   <case class="CaseRue">
+   		<nom>Avenue Matignon</nom>
+   		<couleur>#FF0000</couleur>
+   		<prix>22000</prix>
+   </case>
+
+   <case class="CaseChance">
+   		<nom>Chance</nom>
+   </case>
+
+   <case class="CaseRue">
+   		<nom>Boulevard Malsherbes</nom>
+   		<couleur>#FF0000</couleur>
+   		<prix>22000</prix>
+   </case>
+
+   <case class="CaseRue">
+   		<nom>Avenue Henri-Martin</nom>
+   		<couleur>#FF0000</couleur>
+   		<prix>24000</prix>
+   </case>
+
+   <case class="CaseGare">
+   		<nom>Gare du Nord</nom>
+   		<prix>20000</prix>
+   </case>
+
+   <case class="CaseRue">
+   		<nom>Faubourg Saint-Honoré</nom>
+   		<couleur>#FFFF00</couleur>
+   		<prix>26000</prix>
+   </case>
+
+   <case class="CaseRue">
+   		<nom>Place de la Bourse</nom>
+   		<couleur>#FFFF00</couleur>
+   		<prix>26000</prix>
+   </case>
+
+   <case class="CaseCompagnie">
+   		<nom>Compagnie des Eaux</nom>
+   		<prix>15000</prix>
+   </case>
+
+   <case class="CaseRue">
+   		<nom>Rue Lafayette</nom>
+   		<couleur>#FFFF00</couleur>
+   		<prix>28000</prix>
+   </case>
+
+   <case class="CaseAllerPrison">
+   		<nom>Allez en Prison</nom>
+   </case>
+
+   <case class="CaseRue">
+   		<nom>Avenue Breteuil</nom>
+   		<couleur>#058723</couleur>
+   		<prix>30000</prix>
+   </case>
+
+   <case class="CaseRue">
+   		<nom>Avenue Foch</nom>
+   		<couleur>#058723</couleur>
+   		<prix>30000</prix>
+   </case>
+
+   <case class="CaseCommunaute">
+   		<nom>Caisse de communauté</nom>
+   </case>
+
+   <case class="CaseRue">
+   		<nom>Boulevard des Capucines</nom>
+   		<couleur>#058723</couleur>
+   		<prix>32000</prix>
+   </case>
+
+   <case class="CaseGare">
+   		<nom>Gare Saint Lazare</nom>
+   		<prix>20000</prix>
+   </case>
+
+   <case class="CaseChance">
+   		<nom>Chance</nom>
+   </case>
+
+   <case class="CaseRue">
+   		<nom>Champs Elysées</nom>
+   		<couleur>#0000FF</couleur>
+   		<prix>35000</prix>
+   </case>
+
+   <case class="CaseTaxe">
+      <nom>Taxe de Luxe</nom>
+      <prix>10000</prix>
+   </case>
+
+   <case class="CaseRue">
+   		<nom>Rue de la Paix</nom>
+   		<couleur>#0000FF</couleur>
+   		<prix>45000</prix>
+   </case>
+</cases>
+</jeu>

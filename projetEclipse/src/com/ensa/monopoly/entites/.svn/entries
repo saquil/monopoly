@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="https://insta-monopoly.googlecode.com/svn"
+   revision="33"
+   last-author="erraprodopensource@gmail.com"
+   url="https://insta-monopoly.googlecode.com/svn/trunk/insta-monopoly/src/com/insta/monopoly/entites"
+   uuid="db8e16d7-0a49-0a17-5735-17144c02cbb0"
+   committed-rev="21"
+   kind="dir"
+   committed-date="2011-03-14T14:12:00.914273Z"/>
+<entry
+   name="Banque.java"
+   schedule="delete"
+   checksum="d7d405e4434f97a09d4a99f9d9fa82ba"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="15"
+   text-time="2011-03-11T15:23:34.041000Z"
+   kind="file"
+   committed-date="2011-03-11T15:26:44.650000Z"/>
+<entry
+   name="EntiteMonetaire.java"
+   checksum="457a4fa90ea0f7c6fa70d3800cea9dc3"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="21"
+   text-time="2011-03-14T13:55:42.747000Z"
+   kind="file"
+   committed-date="2011-03-14T14:12:00.914000Z"/>
+<entry
+   name="Joueur.java"
+   revision="63"
+   checksum="39ac08a19f3cc15e47bf2c43b452d142"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="63"
+   text-time="2011-03-21T10:09:03.021000Z"
+   kind="file"
+   committed-date="2011-03-21T11:03:36.786000Z"/>
+<entry
+   name="PotCommun.java"
+   revision="63"
+   checksum="c067bd0726a348e8277d10d02e64b1ae"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="63"
+   text-time="2011-03-21T09:53:42.308000Z"
+   kind="file"
+   committed-date="2011-03-21T11:03:36.786000Z"/>
+</wc-entries>

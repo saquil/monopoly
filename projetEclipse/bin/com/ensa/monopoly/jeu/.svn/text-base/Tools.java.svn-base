@@ -1,0 +1,14 @@
+package com.insta.monopoly.jeu;
+
+import java.util.ArrayList;
+
+public class Tools {
+	public static boolean in_array(int needle, ArrayList<Integer> haystack) {
+		for(int i = 0; i < haystack.size(); i++) {
+			if(needle == haystack.get(i)) {
+				return true;
+			}
+		}
+		return false;
+	}
+}

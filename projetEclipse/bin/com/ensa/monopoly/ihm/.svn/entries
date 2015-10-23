@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="https://insta-monopoly.googlecode.com/svn"
+   name=""
+   revision="33"
+   last-author="erraprodopensource@gmail.com"
+   url="https://insta-monopoly.googlecode.com/svn/trunk/insta-monopoly/src/com/insta/monopoly/ihm"
+   uuid="db8e16d7-0a49-0a17-5735-17144c02cbb0"
+   committed-rev="30"
+   kind="dir"
+   committed-date="2011-03-16T09:58:30.040443Z"/>
+<entry
+   name="ConteneurImages.java"
+   revision="72"
+   checksum="4f87f3f3b3ca6c7661479e005dbda4c0"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-22T12:05:04.963000Z"
+   committed-rev="72"
+   kind="file"
+   committed-date="2011-03-22T13:44:23.066000Z"/>
+<entry
+   name="DessinCentral.java"
+   revision="78"
+   checksum="9071a6ba3e5921f010adfcdf3a000eda"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="78"
+   text-time="2011-03-22T16:27:34.923000Z"
+   kind="file"
+   committed-date="2011-03-22T17:20:03.725000Z"/>
+<entry
+   name="DessinPlateau.java"
+   revision="79"
+   checksum="604fd732a6ba68047e4e2b7335f89d6c"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="79"
+   text-time="2011-03-22T18:46:08.092000Z"
+   kind="file"
+   committed-date="2011-03-22T22:23:17.387000Z"/>
+<entry
+   name="Fenetre.java"
+   revision="63"
+   checksum="074107a485350ebc8c9663f1eb06e041"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="63"
+   text-time="2011-03-21T10:47:02.997000Z"
+   kind="file"
+   committed-date="2011-03-21T11:03:36.786000Z"/>
+<entry
+   name="Fonts.java"
+   revision="76"
+   checksum="b0a2a7082e203d255a044e36b46b8cf8"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="76"
+   text-time="2011-03-21T22:52:36.892000Z"
+   kind="file"
+   committed-date="2011-03-22T14:03:08.218000Z"/>
+<entry
+   name="Geom.java"
+   revision="76"
+   checksum="d79a7d4165b626642a9b2737027a5fae"
+   last-author="erraprodopensource@gmail.com"
+   committed-rev="76"
+   text-time="2011-03-21T22:57:43.916000Z"
+   kind="file"
+   committed-date="2011-03-22T14:03:08.218000Z"/>
+<entry
+   name="MessagePopup.java"
+   revision="79"
+   checksum="6eb0e63b53ab0f757b9c2764a18777f9"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-22T20:24:24.112000Z"
+   committed-rev="79"
+   kind="file"
+   committed-date="2011-03-22T22:23:17.387000Z"/>
+</wc-entries>

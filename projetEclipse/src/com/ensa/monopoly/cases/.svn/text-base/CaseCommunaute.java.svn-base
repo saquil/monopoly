@@ -1,0 +1,8 @@
+package com.insta.monopoly.cases;
+
+public class CaseCommunaute extends CaseCarte {
+
+	public CaseCommunaute(int position, String nom) {
+		super(position, nom);
+	}
+}

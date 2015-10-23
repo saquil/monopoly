@@ -1,0 +1,77 @@
+package com.insta.monopoly.cartes;
+
+import java.util.ArrayList;
+
+import com.insta.monopoly.jeu.De;
+
+public class Pioche {
+	/* TODO : PRENDRE EN COMPTE LES CARTES DEJA PIOCHEES */
+
+	private ArrayList<CarteChance> pileChance;
+	public ArrayList<CarteChance> getPileChance() {
+		return pileChance;
+	}
+	public void setPileChance(ArrayList<CarteChance> pileChance) {
+		this.pileChance = pileChance;
+	}
+
+	private ArrayList<CarteCommunaute> pileCommunaute;
+	
+	private ArrayList<CarteChance> cartesChance;
+	public ArrayList<CarteChance> getCartesChance() {
+		return cartesChance;
+	}
+	public void setCartesChance(ArrayList<CarteChance> cartesChance) {
+		this.cartesChance = cartesChance;
+	}
+
+	private ArrayList<CarteCommunaute> cartesCommunaute;
+	
+	public Pioche() {
+		cartesChance = new ArrayList<CarteChance>();
+		cartesCommunaute = new ArrayList<CarteCommunaute>();
+		pileChance = new ArrayList<CarteChance>();
+		pileCommunaute = new ArrayList<CarteCommunaute>();
+	}
+	public void ajouterCarteChance(CarteChance c) {
+		cartesChance.add(c);
+	}
+
+	public void ajouterCarteCommunaute(CarteCommunaute c) {
+		cartesCommunaute.add(c);
+	}
+
+	public ArrayList<CarteCommunaute> getCartesCommunaute() {
+		return cartesCommunaute;
+	}
+
+	public void setCartesCommunaute(ArrayList<CarteCommunaute> cartesCommunaute) {
+		this.cartesCommunaute = cartesCommunaute;
+	}
+
+	public CarteChance piocherUneCarteChance() {
+		if(pileChance.size() == 0) {
+			pileChance = (ArrayList<CarteChance>)cartesChance.clone();
+		}
+		int randomCarteNumber = De.getRandom(0, cartesChance.size()-1);
+		CarteChance resultat = cartesChance.get(randomCarteNumber);
+		cartesChance.remove(randomCarteNumber);
+		if(cartesChance.size() == 0) {
+			cartesChance = (ArrayList<CarteChance>)pileChance.clone();
+		}
+		return resultat;
+	}
+
+	public CarteCommunaute piocherUneCarteCommunaute() {
+		if(pileCommunaute.size() == 0) {
+			pileCommunaute = (ArrayList<CarteCommunaute>)cartesCommunaute.clone();
+		}
+		int randomCarteNumber = De.getRandom(0, cartesCommunaute.size()-1);
+		CarteCommunaute resultat = cartesCommunaute.get(randomCarteNumber);
+		cartesCommunaute.remove(randomCarteNumber);
+		if(cartesCommunaute.size() == 0) {
+			cartesCommunaute = (ArrayList<CarteCommunaute>)pileCommunaute.clone();
+		}
+		return resultat;
+	}
+}

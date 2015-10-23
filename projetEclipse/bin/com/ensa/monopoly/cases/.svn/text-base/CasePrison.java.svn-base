@@ -1,0 +1,8 @@
+package com.insta.monopoly.cases;
+
+public class CasePrison extends Case {
+
+	public CasePrison(int position, String nom) {
+		super(position, nom);
+	}
+}

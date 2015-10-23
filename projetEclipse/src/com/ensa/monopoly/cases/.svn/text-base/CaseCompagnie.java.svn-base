@@ -1,0 +1,23 @@
+package com.insta.monopoly.cases;
+
+public class CaseCompagnie extends CaseCommerciale {
+
+	public CaseCompagnie(int position, String nom, int prix) {
+		super(position, nom);
+		this.setPrix(prix);
+	}
+	
+	public  int prixLoyer(int facteur, boolean terrainGroupeSousHypotheque) {
+		return 0;
+	}
+	
+	public  int prixLoyer(int facteur,  boolean terrainGroupeSousHypotheque, int des) {
+		if(this.isSousHypotheque()) {
+			return 0;
+		}
+		if(terrainGroupeSousHypotheque == true) {
+			return (int)((float)des*15);
+		}
+		return (facteur==2) ? (int)((float)des*15) : (int)((float)des*37.5f); 
+	}
+}

@@ -1,0 +1,30 @@
+package com.insta.monopoly.cases;
+
+public class CaseGare extends CaseCommerciale {
+
+	public CaseGare(int position, String nom, int prix) {
+		super(position, nom);
+		this.setPrix(prix);
+	}
+
+	public int prixLoyer(int facteur, boolean terrainGroupeSousHypotheque) {
+		if (this.isSousHypotheque()) {
+			return 0;
+		}
+		if (terrainGroupeSousHypotheque == true) {
+			return (int) ((float) this.getPrix() / 8.0f);
+		}
+		switch (facteur) {
+		case 1:
+			return (int) ((float) this.getPrix() / 8.0f);
+		case 2:
+			return (int) ((float) this.getPrix() * 4.8f);
+		case 3:
+			return (int) ((float) this.getPrix() * 2.5f);
+		case 4:
+			return (int) ((float) this.getPrix());
+		default:
+			return (int) ((float) this.getPrix() / 8.0f);
+		}
+	}
+}

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="https://insta-monopoly.googlecode.com/svn"
+   revision="44"
+   last-author="erraprodopensource@gmail.com"
+   url="https://insta-monopoly.googlecode.com/svn/trunk/insta-monopoly/resources"
+   committed-rev="44"
+   kind="dir"
+   committed-date="2011-03-17T15:38:16.949000Z"/>
+<entry
+   name="circle64l.png"
+   revision="75"
+   checksum="37a10a122fa86272d0c8a9617ce78863"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-21T12:44:38.320000Z"
+   committed-rev="75"
+   kind="file"
+   committed-date="2011-03-22T13:45:18.288000Z"
+   prop-time="2011-03-22T13:45:10.189000Z"/>
+<entry
+   name="gare.png"
+   revision="58"
+   kind="file"
+   deleted="true"/>
+<entry
+   name="monopoly-house.jpg"
+   revision="75"
+   checksum="5c3892d40fee58e374e0cb8a8411f05e"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-22T10:43:38.913000Z"
+   committed-rev="75"
+   kind="file"
+   committed-date="2011-03-22T13:45:18.288000Z"
+   prop-time="2011-03-22T13:45:10.217000Z"/>
+<entry
+   name="monopoly_chance.gif"
+   revision="75"
+   checksum="3ed062c85fabd0ad5599fbb8dc0f6eb5"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-22T12:03:04.427000Z"
+   committed-rev="75"
+   kind="file"
+   committed-date="2011-03-22T13:45:18.288000Z"
+   prop-time="2011-03-22T13:45:10.324000Z"/>
+<entry
+   name="monopoly_chest.gif"
+   revision="75"
+   checksum="eb0e7b0d94aafb25c6fcb946d40e9028"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-22T12:03:10.148000Z"
+   committed-rev="75"
+   kind="file"
+   committed-date="2011-03-22T13:45:18.288000Z"
+   prop-time="2011-03-22T13:45:10.353000Z"/>
+<entry
+   name="monopoly_hotel.jpg"
+   revision="75"
+   checksum="195b9e5bec41bd53c99c65adf90fc832"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-22T10:43:36.089000Z"
+   committed-rev="75"
+   kind="file"
+   committed-date="2011-03-22T13:45:18.288000Z"
+   prop-time="2011-03-22T13:45:10.134000Z"/>
+<entry
+   name="monopoly_hotel.png"
+   revision="75"
+   checksum="d57a1f55692c17b622e6f96a9b6637ae"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-22T11:17:39.384000Z"
+   committed-rev="75"
+   kind="file"
+   committed-date="2011-03-22T13:45:18.288000Z"
+   prop-time="2011-03-22T13:45:10.299000Z"/>
+<entry
+   name="monopoly_icon_arrow_col.gif"
+   checksum="80482bc6ba1d24d4fa3d57daf89f0fea"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-17T14:49:07.848000Z"
+   committed-rev="44"
+   kind="file"
+   committed-date="2011-03-17T15:38:16.949000Z"
+   prop-time="2011-03-17T15:37:48.013000Z"/>
+<entry
+   name="monopoly_icon_chance_1_col.gif"
+   checksum="778db27d1a38f11413a0146fec674702"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-17T14:49:10.973000Z"
+   committed-rev="44"
+   kind="file"
+   committed-date="2011-03-17T15:38:16.949000Z"
+   prop-time="2011-03-17T15:37:47.825000Z"/>
+<entry
+   name="monopoly_icon_chest_col.gif"
+   checksum="aa98846a483c4de09ea31b9c1e3fd8a1"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-17T14:49:37.175000Z"
+   committed-rev="44"
+   kind="file"
+   committed-date="2011-03-17T15:38:16.949000Z"
+   prop-time="2011-03-17T15:37:47.846000Z"/>
+<entry
+   name="monopoly_icon_electric_col.gif"
+   checksum="a8a620c5f79c2b85554352148eac732f"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-17T14:49:04.230000Z"
+   committed-rev="44"
+   kind="file"
+   committed-date="2011-03-17T15:38:16.949000Z"
+   prop-time="2011-03-17T15:37:47.717000Z"/>
+<entry
+   name="monopoly_icon_go_jail_col.gif"
+   checksum="b77c0d3bd22114d090564a33b3c3a843"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-17T14:48:51.582000Z"
+   committed-rev="44"
+   kind="file"
+   committed-date="2011-03-17T15:38:16.949000Z"
+   prop-time="2011-03-17T15:37:47.925000Z"/>
+<entry
+   name="monopoly_icon_jake.gif"
+   checksum="3db9e047e5bf6afe49159a2bf6403d66"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-17T14:48:56.100000Z"
+   committed-rev="44"
+   kind="file"
+   committed-date="2011-03-17T15:38:16.949000Z"
+   prop-time="2011-03-17T15:37:47.785000Z"/>
+<entry
+   name="monopoly_icon_parking_col.gif"
+   checksum="cf475a1cf6658712780df14501418430"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-17T15:08:17.572000Z"
+   committed-rev="44"
+   kind="file"
+   committed-date="2011-03-17T15:38:16.949000Z"
+   prop-time="2011-03-17T15:37:47.743000Z"/>
+<entry
+   name="monopoly_icon_tax_col.gif"
+   checksum="c0c0397c7b6fd31216a99acda2ebcc71"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-17T14:49:31.175000Z"
+   committed-rev="44"
+   kind="file"
+   committed-date="2011-03-17T15:38:16.949000Z"
+   prop-time="2011-03-17T15:37:48.041000Z"/>
+<entry
+   name="monopoly_icon_train_bw.gif"
+   checksum="e3f70e61d6861c718137a686a979a950"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-17T15:25:30.732000Z"
+   committed-rev="44"
+   kind="file"
+   committed-date="2011-03-17T15:38:16.949000Z"
+   prop-time="2011-03-17T15:37:47.984000Z"/>
+<entry
+   name="monopoly_icon_water_bw.gif"
+   checksum="3f6234128dec34716f0ac54b300c11fd"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-17T14:48:59.327000Z"
+   committed-rev="44"
+   kind="file"
+   committed-date="2011-03-17T15:38:16.949000Z"
+   prop-time="2011-03-17T15:37:47.896000Z"/>
+<entry
+   name="monopoly_logo.png"
+   revision="75"
+   checksum="a1af21b94c8076f7dc718a27ca33fbb3"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-22T12:02:58.150000Z"
+   committed-rev="75"
+   kind="file"
+   committed-date="2011-03-22T13:45:18.288000Z"
+   prop-time="2011-03-22T13:45:10.106000Z"/>
+<entry
+   name="monopoly_maison.png"
+   revision="75"
+   checksum="fa81051ab6c59763caceae9f4541461b"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-22T11:21:35.277000Z"
+   committed-rev="75"
+   kind="file"
+   committed-date="2011-03-22T13:45:18.288000Z"
+   prop-time="2011-03-22T13:45:10.269000Z"/>
+<entry
+   name="monopoly_token_car.png"
+   revision="64"
+   checksum="6e1e65a50cc6eb3467f2a1f906dc7d0f"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-21T13:27:41.265000Z"
+   committed-rev="64"
+   kind="file"
+   committed-date="2011-03-21T14:55:13.837000Z"
+   prop-time="2011-03-17T15:37:48.072000Z"/>
+<entry
+   name="monopoly_token_dog.png"
+   revision="64"
+   checksum="b94993918caad30830572c08575d55e4"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-21T13:26:27.464000Z"
+   committed-rev="64"
+   kind="file"
+   committed-date="2011-03-21T14:55:13.837000Z"
+   prop-time="2011-03-17T15:37:47.870000Z"/>
+<entry
+   name="monopoly_token_hat.png"
+   revision="64"
+   checksum="4bca678111ae3c1484d3364ddf796db4"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-21T13:26:51.214000Z"
+   committed-rev="64"
+   kind="file"
+   committed-date="2011-03-21T14:55:13.837000Z"
+   prop-time="2011-03-17T15:37:47.804000Z"/>
+<entry
+   name="monopoly_token_thimble.Png"
+   revision="65"
+   checksum="50320789c328c61af92e75351397100d"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-21T13:27:15.773000Z"
+   committed-rev="65"
+   kind="file"
+   committed-date="2011-03-21T14:56:17.839000Z"
+   prop-time="2011-03-21T14:56:11.284000Z"/>
+<entry
+   name="monopoly_token_thimble.png"
+   revision="64"
+   checksum="50320789c328c61af92e75351397100d"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-21T13:27:15.773000Z"
+   committed-rev="64"
+   kind="file"
+   committed-date="2011-03-21T14:55:13.837000Z"
+   prop-time="2011-03-17T15:37:47.950000Z"/>
+<entry
+   name="skin1.xml"
+   revision="74"
+   checksum="a57264a481af9d9bf9323e07839b7b81"
+   last-author="erraprodopensource@gmail.com"
+   uuid="db8e16d7-0a49-0a17-5735-17144c02cbb0"
+   committed-rev="74"
+   text-time="2011-03-22T12:08:13.112000Z"
+   kind="file"
+   committed-date="2011-03-22T13:44:51.572000Z"/>
+<entry
+   name="skin2.xml"
+   revision="58"
+   checksum="ee7008c8da9ad665d44ecab43885540b"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-18T13:26:22.483000Z"
+   committed-rev="58"
+   kind="file"
+   committed-date="2011-03-18T14:06:13.293000Z"/>
+</wc-entries>

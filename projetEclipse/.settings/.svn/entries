@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="https://insta-monopoly.googlecode.com/svn"
+   revision="23"
+   last-author="erraprodopensource@gmail.com"
+   url="https://insta-monopoly.googlecode.com/svn/trunk/insta-monopoly/.settings"
+   committed-rev="11"
+   kind="dir"
+   committed-date="2011-03-11T14:45:53.957000Z"/>
+<entry
+   name="org.eclipse.jdt.core.prefs"
+   checksum="f482435eead159c9ed2bb7b4f3e3267e"
+   last-author="erraprodopensource@gmail.com"
+   text-time="2011-03-11T14:43:44.212000Z"
+   committed-rev="11"
+   kind="file"
+   committed-date="2011-03-11T14:45:53.957000Z"/>
+</wc-entries>
